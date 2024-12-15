@@ -13,7 +13,12 @@ spec:
         app: order-svc
     spec:
       containers:
-        - image: mezzeddine/springpostgres:v2  #raje/order-svc:1.0
+        #- image: mezzeddine/springpostgres:v2  #raje/order-svc:1.0
+       # - image: mezzeddine/springkafka:vv9
+
+        - image: mezzeddine/springkafka:vv18
+
+
           name: order-svc
           ports:
             - containerPort: 8080

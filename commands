@@ -1,0 +1,26 @@
+ kubectl port-forward svc/order-svc-service 8080:8080
+
+
+ curl -s -X POST localhost:8080/addCustomer \
+   -H "Content-Type: application/json" \
+   -d '{"id": "foo", "companyName": "bar", "contactName": "2023-05-04"}'
+ {"contactTitle":"1","address":"foo","city":"bar","region":"2023-05-04",
+ "postalCode":"2023-05-04", "country":"2023-05-04", "phone":"2023-05-04", "fax":"2023-05-04"}
+
+
+ curl localhost:8080/api/v1/customers
+
+
+  curl -s -X POST localhost:8080/addCustomer    -H "Content-Type: application/json"    -d '{"customer_id": "foo", "companyName": "bar", "contactName": "2023-05-04", "contactTitle":"1","address":"foo","city":"bar","region":"2023
+ -05-04", "postalCode":"2023-05-04", "country":"2023-05-04", "phone":"2023-05-04", "fax":"2023-05-04"}'
+
+
+
+ curl -s -X POST localhost:8080/api/v1/addCustomer    -H "Content-Type: application/json"    -d '{"customer_id": "foo", "companyName": "bar",
+ "contactName": "2023-05-04",
+  "contactTitle":"1","address":"foo","city":"bar","region":"2023-05-04", "postalCode":"2023-05-04", "country":"2023-05-04",
+  "phone":"2023-05-04", "fax":"2023-05-04"}'
+
+
+
+  curl -s -X POST localhost:8080/api/v1/addCustomer    -H "Content-Type: application/json"    -d '{ "companyName": "bar", "contactName": "2023-05-04", "contactTitle":"1","address":"foo","city":"bar","region":"2023-05-04", "postalCode":"2023-05-04", "country":"2023-05-04", "phone":"2023-05-04", "fax":"2023-05-04"}'
